@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		
+		Scanner scan = new Scanner(System.in);
+	
+		int T = scan.nextInt();
+		int A, B, C, D, E = 0;
+		int a = 0;
+		
+			A = scan.nextInt();
+			if(T == A) {
+				a++;
+			}
+			B = scan.nextInt();
+			if(T == B) {
+				a++;
+			}
+			C = scan.nextInt();
+			if(T == C) {
+				a++;
+			}
+			D = scan.nextInt();
+			if(T == D) {
+				a++;
+			}
+			E = scan.nextInt();
+			if(T == E) {
+				a++;
+			}
+			System.out.println(a);
+		
+		scan.close();
+		
+
+	}
+
+}
