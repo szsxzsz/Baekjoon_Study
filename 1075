@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int N = sc.nextInt();
+		int F = sc.nextInt();
+		
+		N = (N/100)*100; // 00으로 나누어 떨어지게 하기
+		
+		while(N%F != 0) { // 나누어지는 수 까지 +1 하기
+			N++;
+		}
+		
+		int a = N%100;
+		
+		if(a<10) {
+			System.out.println("0"+a);
+		} else {
+			System.out.println(a);
+		}
+		
+	}
+
+}
