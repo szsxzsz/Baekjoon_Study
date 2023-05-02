@@ -1,0 +1,36 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		int L = sc.nextInt(); // vacation
+		int A = sc.nextInt(); // homework - korean
+		int B = sc.nextInt(); // homework - math
+		int C = sc.nextInt(); // max - korean
+		int D = sc.nextInt(); // max - math
+		
+		int a = A/C; // 1 day for korean
+		int b = B/D; // 1 day for math
+		
+		if(A%C > 0) {
+			a = a+1;
+		}
+		
+		if(B%D > 0) {
+			b = b+1;
+		}
+		
+		if(a>b) {
+			System.out.println(L-a);
+		} else if(b>a) {
+			System.out.println(L-b);
+		} else {
+			System.out.println(L-a);
+		}
+		
+	}
+
+}
