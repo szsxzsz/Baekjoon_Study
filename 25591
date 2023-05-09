@@ -1,0 +1,28 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		int front = sc.nextInt();
+		int back = sc.nextInt();
+		
+		int a = 100 - front;
+		int b = 100 - back;
+		int c = 100 - (a+b);
+		int d = a*b;
+		int q = d/100;
+		int r = d%100;
+		
+		System.out.println(a+" "+b+" "+c+" "+d+" "+q+" "+r);
+		if(d >= 100) {
+			System.out.println((c+q)+" "+r);
+		} else {
+			System.out.println(c+" "+r);
+		}
+	}
+
+}
