@@ -1,0 +1,31 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		int T = sc.nextInt();
+		
+		for(int i=0; i<T; i++) {
+			int price = sc.nextInt();
+			int option = sc.nextInt();
+			int total = price;
+			
+			for(int j=0; j<option; j++) {
+				int q = sc.nextInt();
+				int p = sc.nextInt();
+				
+				total += q*p;
+			}
+			
+			System.out.println(total);
+		}
+		
+		sc.close();
+		
+	}
+
+}
