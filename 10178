@@ -1,0 +1,25 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+	
+		int T = sc.nextInt();
+		int candy;
+		int sibling;
+		
+		for(int i = 0; i < T; i++) {
+			candy = sc.nextInt();
+			sibling = sc.nextInt();
+			
+			System.out.println("You get " + (candy/sibling) + " piece(s) and your dad gets " + (candy%sibling) + " piece(s).");
+		}
+		
+		sc.close();
+		
+	}
+
+}
