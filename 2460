@@ -1,0 +1,29 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		int people = 0;
+		int max = 0;
+		for(int i=0; i<10; i++) {
+			int out = sc.nextInt();
+			people -= out;
+			int in = sc.nextInt();
+			people += in;
+			
+			if(people>max) {
+				max = people;
+			}
+		}
+		
+		System.out.println(max);
+		
+		sc.close();
+		
+	}
+
+}
