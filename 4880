@@ -1,0 +1,29 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+	
+		while(true) {
+			int a1 = sc.nextInt();
+			int a2 = sc.nextInt();
+			int a3 = sc.nextInt();
+			
+			if(a1 == 0 && a2 == 0 && a3 == 0) {
+				break;
+			}
+
+			int N = a2 - a1;
+			int M = a3 - a2;
+			
+			System.out.println((N == M) ? "AP " + (a3+M) : "GP " + (a3*a2/a1));
+		}
+		
+		sc.close();
+		
+	}
+
+}
