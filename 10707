@@ -1,0 +1,35 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+	
+		int x = sc.nextInt();
+		int y = sc.nextInt();
+		int yc = sc.nextInt();
+		int yd = sc.nextInt();
+		int use = sc.nextInt();
+		
+		int xuse = x*use;
+		int yuse;
+		
+		if(yc >= use) {
+			yuse = y;
+		} else {
+			yuse = y+((use-yc)*yd);
+		}
+		
+		if(xuse > yuse) {
+			System.out.println(yuse);
+		} else if(yuse > xuse) {
+			System.out.println(xuse);
+		}
+		
+		sc.close();
+		
+	}
+
+}
