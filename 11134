@@ -1,0 +1,27 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+	
+		int T = sc.nextInt();
+		
+		for(int i=0; i<T; i++) {
+			int cookie = sc.nextInt();
+			int eat = sc.nextInt();
+			
+			if(cookie%eat == 0) {
+				System.out.println(cookie/eat);
+			} else {
+				System.out.println(cookie/eat+1);
+			}
+		}
+		
+		sc.close();
+		
+	}
+
+}
