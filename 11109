@@ -1,0 +1,31 @@
+import java.io.IOException;
+import java.util.Scanner;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		int T = sc.nextInt();
+		
+		for(int i=0; i<T; i++) {
+			int d = sc.nextInt();
+			int n = sc.nextInt();
+			int s = sc.nextInt();
+			int p = sc.nextInt();
+			
+			if(n*s > d+(n*p)) {
+				System.out.println("parallelize");
+			} else if(n*s < d+(n*p)) {
+				System.out.println("do not parallelize");
+			} else {
+				System.out.println("does not matter");
+			}
+		}
+		
+		sc.close();
+		
+	}
+
+}
