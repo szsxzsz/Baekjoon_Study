@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+	
+		int summer = sc.nextInt();
+		int day = sc.nextInt();
+		int hole = sc.nextInt();
+		int cost = sc.nextInt();
+		
+		System.out.println((summer-1)/day*hole*cost);
+		
+		sc.close();
+		
+	}
+
+}
