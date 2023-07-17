@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			long a = sc.nextLong();
+			
+			if(a == 0) {
+				break;
+			}
+			
+			if(a > 1000000 && a <= 5000000) {
+				a *= 0.9;
+			} else if(a > 5000000) {
+				a *= 0.8;
+			} else {
+				a = a;
+			}
+			
+			System.out.println(a);
+		}
+		
+		sc.close();
+	}
+
+}
