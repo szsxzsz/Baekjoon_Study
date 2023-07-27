@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		int num = 0;
+		
+		while(sc.hasNextInt()) {
+			int a = sc.nextInt();
+			
+			if(a>0) {
+				num++;
+			}
+		}
+		
+		System.out.println(num);
+		
+		sc.close();
+	}
+
+}
