@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		int T = sc.nextInt();
+		int a, b, c;
+		// a = 5 min, b = 1 min, c = 10 sec
+		
+		if(T % 10 > 0) {
+			System.out.println(-1);
+		} else {
+			a = T/300;
+			T = T%300;
+			b = T/60;
+			T = T%60;
+			c = T/10;
+			
+			System.out.println(a+" "+b+" "+c);
+		}
+		sc.close();
+	}
+
+}
