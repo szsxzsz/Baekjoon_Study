@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		int T = sc.nextInt();
+		int Y = 0, M = 0;
+		
+		for(int i = 0; i < T; i++) {
+			int a = sc.nextInt();
+			
+			Y += 10 + 10 * (a/30);
+			M += 15 + 15 * (a/60);
+		}
+		
+		if(Y > M) {
+			System.out.println("M "+M);
+		} else if(M > Y) {
+			System.out.println("Y "+Y);
+		} else if(M == Y) {
+			System.out.println("Y M "+Y);
+		}
+		
+		sc.close();
+	}
+
+}
