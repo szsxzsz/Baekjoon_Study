@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+	
+		int h = sc.nextInt();
+		int m = sc.nextInt();
+		int s = sc.nextInt();
+		int d = sc.nextInt();
+		
+		s += d;
+		m += s/60;
+		s %= 60;
+		h += m/60;
+		m %= 60;
+		h %= 24;
+		
+		System.out.println(h+" "+m+" "+s);
+		
+		sc.close();
+	}
+
+}
