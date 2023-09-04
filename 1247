@@ -1,0 +1,33 @@
+import java.math.BigInteger;
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i=0; i<3; i++) {
+			int T = sc.nextInt();
+			BigInteger S = new BigInteger("0");
+			
+			for(int j=0; j<T; j++) {
+				BigInteger num = sc.nextBigInteger();
+				
+				S = S.add(num);
+			}
+			
+			if(S.compareTo(BigInteger.ZERO) == 1) {
+				System.out.println("+");
+			} else if(S.compareTo(BigInteger.ZERO) == -1) {
+				System.out.println("-");
+			} else {
+				System.out.println(0);
+			}
+		}
+		
+		sc.close();
+	}
+
+}
