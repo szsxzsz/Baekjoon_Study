@@ -1,0 +1,35 @@
+import java.math.BigInteger;
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+	
+		int T = sc.nextInt();
+		
+		for(int i=0; i<T; i++) {
+			int student = sc.nextInt();
+			BigInteger total = new BigInteger("0");
+			
+			for(int j=0; j<student; j++) {
+				BigInteger candy = sc.nextBigInteger();
+				
+				total = total.add(candy);
+			}
+			
+			String remainder = String.valueOf(total.remainder(BigInteger.valueOf(student)));
+			
+			if(remainder.equals("0")) {
+				System.out.println("YES");
+			} else {
+				System.out.println("NO");
+			}
+		}
+		
+		sc.close();
+	}
+
+}
