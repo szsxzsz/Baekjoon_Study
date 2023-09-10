@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+	
+		int T = sc.nextInt();
+		int gSum = 0;
+		int sSum = 0;
+		
+		for(int i=0; i<T; i++) {
+			int g1 = sc.nextInt();
+			int g2 = sc.nextInt();
+			int g3 = sc.nextInt();
+			int g4 = sc.nextInt();
+			int g5 = sc.nextInt();
+			int g6 = sc.nextInt();
+			
+			int s1 = sc.nextInt();
+			int s2 = sc.nextInt();
+			int s3 = sc.nextInt();
+			int s4 = sc.nextInt();
+			int s5 = sc.nextInt();
+			int s6 = sc.nextInt();
+			int s7 = sc.nextInt();
+			
+			gSum = (g1*1)+(g2*2)+(g3*3)+(g4*3)+(g5*4)+(g6*10);
+			sSum = (s1*1)+(s2*2)+(s3*2)+(s4*2)+(s5*3)+(s6*5)+(s7*10);
+			
+			if(gSum > sSum) {
+				System.out.println("Battle "+(i+1)+": Good triumphs over Evil");
+			} else if(sSum > gSum) {
+				System.out.println("Battle "+(i+1)+": Evil eradicates all trace of Good");
+			} else {
+				System.out.println("Battle "+(i+1)+": No victor on this battle field");
+			}
+		}
+		
+		sc.close();
+	}
+
+}
