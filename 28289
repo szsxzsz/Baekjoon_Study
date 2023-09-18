@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		int p = sc.nextInt();
+		int soft = 0, im = 0, in = 0, one = 0;
+		
+		for(int i=0; i<p; i++) {
+			int g = sc.nextInt(); // grade
+			int c = sc.nextInt(); // class
+			int n = sc.nextInt(); // number
+			
+			if(g >= 2) {
+				if(c == 1 || c == 2) {
+					soft++;
+				} else if(c == 3) {
+					im++;
+				} else if(c == 4) {
+					in++;
+				}
+			} else {
+				one++;
+			}
+		}
+		
+		System.out.println(soft);
+		System.out.println(im);
+		System.out.println(in);
+		System.out.println(one);
+		
+		sc.close();
+	}
+
+}
