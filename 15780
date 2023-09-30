@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		Scanner sc = new Scanner(System.in);
+		
+		int student = sc.nextInt();
+		int plug = sc.nextInt();
+		int sum = 0;
+		
+		for(int i=0; i<plug; i++) {
+			int k = sc.nextInt();
+			
+			if(k%2 == 0) {
+				sum += k/2;
+			} else {
+				sum += (k+1)/2;
+			}
+		}
+		
+		if(student > sum) {
+			System.out.println("NO");
+		} else {
+			System.out.println("YES");
+		}
+		
+		sc.close();
+	}
+
+}
